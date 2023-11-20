@@ -2,8 +2,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Plantilla Módulo",
-    "summary": "Sistema DOQ Curso Sistema DOQ",
+    "name": "Library",
+    "summary": "Librería en odoo",
     "version": "16.0.1.0.0",
     "category": "Sistema DOQ",
     "website": "https://www.qubiq.es",
@@ -12,5 +12,7 @@
     "application": True,
     "installable": True,
     "depends": [],
-    "data": [],
+    "data": [
+        'views/book_library.xml',
+        'security/ir.model.access.csv'],
 }
