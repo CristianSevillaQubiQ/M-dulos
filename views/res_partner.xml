@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_member_view" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="book_author"></field>
+            </xpath>
+            <xpath expr="//field[@name='book_author']" position="after">
+                <field name="library_member"></field>
+            </xpath>
+            <xpath expr="//field[@name='library_member']" position="after">
+                <field name="member_ID" 
+                attrs="{ 'invisible': [('library_member', '=', False)] }"
+                ></field>
+            </xpath>
+        </field>
+    </record>
+
+    
+
+</odoo>
