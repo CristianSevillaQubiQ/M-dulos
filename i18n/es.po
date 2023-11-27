@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 13:16+0000\n"
-"PO-Revision-Date: 2023-11-20 14:18+0100\n"
+"POT-Creation-Date: 2023-11-27 12:50+0000\n"
+"PO-Revision-Date: 2023-11-27 13:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -18,29 +18,64 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 
 #. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.base_view_res_partner_author_filter
+#: model:ir.ui.menu,name:doq_2.library_authors_data_menu
+msgid "Authors"
+msgstr "Autores"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__book_author
+#: model:ir.model.fields,field_description:doq_2.field_res_users__book_author
+msgid "Book Author"
+msgstr "Autor"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.view_res_partner_filter
+msgid "Book author"
+msgstr "Autor"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__book_type
 msgid "Book type"
 msgstr "Tipo de libro"
 
 #. module: doq_2
 #: model:ir.actions.act_window,name:doq_2.record_name
+#: model:ir.ui.menu,name:doq_2.library_books_data_menu
 msgid "Books"
 msgstr "Libros"
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_uid
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_date
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.ui.menu,name:doq_2.library_data_menu
+msgid "Data"
+msgstr "Datos"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__date
 msgid "Date"
-msgstr "Fecha"
+msgstr "FechaFecha"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__description
+msgid "Description"
+msgstr "Descripción"
 
 #. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__book_type__digital
@@ -49,6 +84,7 @@ msgstr "Digital"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__display_name
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -58,29 +94,62 @@ msgid "Edition"
 msgstr "Edición"
 
 #. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.record_genre
+#: model:ir.ui.menu,name:doq_2.library_genres_data_menu
+msgid "Genres"
+msgstr "Géneros"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__id
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__id
 msgid "ID"
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book____last_update
+#: model:ir.model.fields,field_description:doq_2.field_library_genre____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_uid
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_date
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: doq_2
-#: model:ir.ui.menu,name:doq_2.libray_book_menu_act
+#: model:ir.ui.menu,name:doq_2.library_book_main_menu
 msgid "Library"
 msgstr "Librería"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__library_member
+#: model:ir.model.fields,field_description:doq_2.field_res_users__library_member
+msgid "Library Member"
+msgstr "Socio"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.view_res_partner_filter
+msgid "Library member"
+msgstr "Socio"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__member_ID
+#: model:ir.model.fields,field_description:doq_2.field_res_users__member_ID
+msgid "Member Id"
+msgstr "ID del socio"
+
+#. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.base_view_res_partner_member_filter
+#: model:ir.ui.menu,name:doq_2.library_members_data_menu
+msgid "Members"
+msgstr "Socios"
 
 #. module: doq_2
 #: model:ir.model,name:doq_2.model_library_book
@@ -88,7 +157,13 @@ msgid "Model for registering books."
 msgstr "Modelo para registrar libros."
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_library_genre
+msgid "Model for registering genres."
+msgstr "Modelo para registrar géneros"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__name
+#: model:ir.model.fields,field_description:doq_2.field_library_genre__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -116,3 +191,8 @@ msgstr "Vendido"
 #: model_terms:ir.actions.act_window,help:doq_2.record_name
 msgid "Start adding some books"
 msgstr "Empieza añadiendo unos libros"
+
+#. module: doq_2
+#: model_terms:ir.actions.act_window,help:doq_2.record_genre
+msgid "Start adding some genres"
+msgstr "Empieza añadiendo géneros"

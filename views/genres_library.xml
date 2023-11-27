@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- library.genres form view -->
+    <record id="library_genre_view_form" model="ir.ui.view">
+        <field name="name">library.genre.view.form</field>
+        <field name="model">library.genre</field>
+        <field name="arch" type="xml">
+            <form string=""> <!--form, es para la entrada de datos de un libro-->
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="description"/>                            
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- library.book tree view -->
+    <record id="library_genre_view_tree" model="ir.ui.view">
+        <field name="name">library.genre.view.tree</field>
+        <field name="model">library.genre</field>
+        <field name="arch" type="xml">
+            <tree editable="top"> <!-- tree es para la vista de los libros registrados -->
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="record_genre" model="ir.actions.act_window">
+        <field name="name">Genres</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.genre</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Start adding some genres
+            </p>
+            <p>
+            </p>
+        </field>
+
+    </record>
+    <menuitem id="library_genres_data_menu" parent="doq_2.library_data_menu" name="Genres" action="record_genre" sequence="2"/>
+
+</odoo>
