@@ -6,3 +6,6 @@ class ResPartner(models.Model):
     book_author = fields.Boolean()
     library_member = fields.Boolean()
     member_ID = fields.Integer()
+    
+    genres_ids = fields.Many2many(comodel_name='library.genre')
+    
