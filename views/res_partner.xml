@@ -12,13 +12,56 @@
                 <field name="library_member"></field>
             </xpath>
             <xpath expr="//field[@name='library_member']" position="after">
-                <field name="member_ID" 
-                attrs="{ 'invisible': [('library_member', '=', False)] }"
-                ></field>
+                <field name="member_ID" attrs="{ 'invisible': [('library_member', '=', False)] }"></field>
+            </xpath>
+            <xpath expr="//field[@name='member_ID']" position="after">
+                <field name="genres_ids" widget="many2many_tags" attrs="{ 'invisible': [('book_author', '=', False)] }"></field>
             </xpath>
         </field>
     </record>
 
-    
+
+
+
+    <!-- Adding filters based on the new parameters -->
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="name">res.partner.select</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="before">
+                <filter name="book_author_filter" string="Book author" domain="[('book_author', '=', True)]"/>
+                <filter name="library_member_filter" string="Library member" domain="[('library_member', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+    <!-- default filters and default checks in contacts views -->
+    <record id="base_view_res_partner_author_filter" model="ir.actions.act_window">
+        <field name="name">Authors</field>
+
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_book_author_filter':1,
+                               'default_book_author':True}</field>
+    </record>
+
+
+    <record id="base_view_res_partner_member_filter" model="ir.actions.act_window">
+        <field name="name">Members</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_library_member_filter':1,
+                               'default_library_member':True}</field>
+    </record>
+
+
+    <menuitem id="library_authors_data_menu" parent="doq_2.library_data_menu" name="Authors" action="base_view_res_partner_author_filter" sequence="3"/>
+    <menuitem id="library_members_data_menu" parent="doq_2.library_data_menu" name="Members" action="base_view_res_partner_member_filter" sequence="4"/>
+
 
 </odoo>

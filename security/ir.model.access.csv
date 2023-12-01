@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_library_book,account.library.book,model_library_book,base.group_user,1,1,1,1
 access_library_genre,account.library.genre,model_library_genre,base.group_user,1,1,1,1
 access_res_partner,account.res.partner,model_res_partner,base.group_user,1,1,1,1
+access_library_book_component_line,account.library.book.component.line,model_library_book_component_line,base.group_user,1,1,1,1
