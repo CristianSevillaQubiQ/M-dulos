@@ -29,12 +29,14 @@ class books(models.Model):
 
 
     # author/s
-    authors_ids = fields.Many2many(comodel_name='res.partner')
+    authors_ids = fields.Many2one(comodel_name='res.partner')
     # genres
     genres_ids = fields.Many2many(comodel_name='library.genre')
     # pack
     is_in_pack = fields.Boolean()
-    pack_id = fields.One2many(comodel_name='library.book.component.line', inverse_name='component_ids')
+    
+    line_ids = fields.One2many(comodel_name='library.book.component.line', inverse_name='component_id')
+    
     
 
     
