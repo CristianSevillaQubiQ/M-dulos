@@ -5,6 +5,11 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="before">
+                <field name="author_name" attrs="{ 'invisible': [('book_author', '=', False)] }"></field>
+                <field name="author_surname" attrs="{ 'invisible': [('book_author', '=', False)] }"></field>
+            </xpath>
+            
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="book_author"></field>
             </xpath>
