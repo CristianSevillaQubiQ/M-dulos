@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 11:24+0000\n"
-"PO-Revision-Date: 2023-12-01 12:32+0100\n"
+"POT-Creation-Date: 2023-12-13 12:01+0000\n"
+"PO-Revision-Date: 2023-12-14 10:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -25,18 +25,21 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__description_sale
 msgid ""
-"A description of the Product that you want to communicate to your "
-"customers. This description will be copied to every Sales Order, Delivery "
-"Order and Customer Invoice/Credit Note"
+"A description of the Product that you want to communicate to your customers. This description will "
+"be copied to every Sales Order, Delivery Order and Customer Invoice/Credit Note"
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__detailed_type
 msgid ""
-"A storable product is a product for which you manage stock. The Inventory "
-"app has to be installed.\n"
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
 "A consumable product is a product for which stock is not managed.\n"
 "A service is a non-material product you provide."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__account_tag_ids
+msgid "Account Tags"
 msgstr ""
 
 #. module: doq_2
@@ -73,6 +76,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__message_attachment_count
 msgid "Attachment Count"
 msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_book_view_form
+msgid "Author"
+msgstr "Autor"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__author_name
+#: model:ir.model.fields,field_description:doq_2.field_res_users__author_name
+msgid "Author Name"
+msgstr "Nombre"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__author_surname
+#: model:ir.model.fields,field_description:doq_2.field_res_users__author_surname
+msgid "Author Surname"
+msgstr "Apellido"
 
 #. module: doq_2
 #: model:ir.actions.act_window,name:doq_2.base_view_res_partner_author_filter
@@ -124,6 +144,17 @@ msgid "Can be Sold"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__route_from_categ_ids
+msgid "Category Routes"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_book__pack_type__colection
+#: model_terms:ir.ui.view,arch_db:doq_2.record_name_search
+msgid "Colection"
+msgstr "Colección"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__color
 msgid "Color Index"
 msgstr ""
@@ -134,9 +165,9 @@ msgid "Company"
 msgstr ""
 
 #. module: doq_2
-#: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__component_ids
+#: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__component_id
 msgid "Component"
-msgstr "Componente"
+msgstr "Componentes"
 
 #. module: doq_2
 #: model:ir.model,name:doq_2.model_res_partner
@@ -154,8 +185,14 @@ msgid "Cost Currency"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__cost_method
+msgid "Costing Method"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__create_uid
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__create_uid
 msgid "Created by"
 msgstr ""
@@ -163,6 +200,7 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__create_date
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__create_date
 msgid "Created on"
 msgstr ""
@@ -170,6 +208,16 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__currency_id
 msgid "Currency"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__sale_delay
+msgid "Customer Lead Time"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__taxes_id
+msgid "Customer Taxes"
 msgstr ""
 
 #. module: doq_2
@@ -183,6 +231,16 @@ msgid "Date"
 msgstr "Fecha"
 
 #. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__supplier_taxes_id
+msgid "Default taxes used when buying the product."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__taxes_id
+msgid "Default taxes used when selling the product."
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__uom_id
 msgid "Default unit of measure used for all stock operations."
 msgstr ""
@@ -190,8 +248,22 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__uom_po_id
 msgid ""
-"Default unit of measure used for purchase orders. It must be in the same "
-"category as the default unit of measure."
+"Default unit of measure used for purchase orders. It must be in the same category as the default "
+"unit of measure."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__sale_delay
+msgid ""
+"Delivery lead time, in days. It's the number of days, promised to the customer, between the "
+"confirmation of the sales order and the delivery."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__route_ids
+msgid ""
+"Depending on the modules installed, this will allow you to define the route of the product: whether "
+"it will be bought, manufactured, replenished on order, etc."
 msgstr ""
 
 #. module: doq_2
@@ -201,13 +273,29 @@ msgid "Description"
 msgstr "Descripción"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__description_pickingout
+msgid "Description on Delivery Orders"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__description_picking
+msgid "Description on Picking"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__description_pickingin
+msgid "Description on Receptions"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__book_type__digital
 msgid "Digital"
-msgstr ""
+msgstr "Digital"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__display_name
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__display_name
 msgid "Display Name"
 msgstr ""
@@ -216,6 +304,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__edition
 msgid "Edition"
 msgstr "Edición"
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__property_account_expense_id
+msgid "Expense Account"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__expense_policy
+msgid ""
+"Expenses and vendor bills can be re-invoiced to a customer.With this option, a validated expense "
+"can be re-invoice to a customer at its cost or sales price."
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__priority
@@ -235,6 +340,11 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__virtual_available
+msgid "Forecasted Quantity"
 msgstr ""
 
 #. module: doq_2
@@ -264,6 +374,7 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__id
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__id
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__id
 msgid "ID"
 msgstr ""
@@ -285,13 +396,13 @@ msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__message_has_error
+#: model:ir.model.fields,help:doq_2.field_library_book__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__active
-msgid ""
-"If unchecked, it will allow you to hide the product without removing it."
+msgid "If unchecked, it will allow you to hide the product without removing it."
 msgstr ""
 
 #. module: doq_2
@@ -322,18 +433,40 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__standard_price
 msgid ""
-"In Standard Price & AVCO: value of the product (automatically computed in "
-"AVCO).\n"
-"        In FIFO: value of the next unit that will leave the stock "
-"(automatically computed).\n"
-"        Used to value the product when the purchase cost is not known (e.g. "
-"inventory adjustment).\n"
+"In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
+"        In FIFO: value of the next unit that will leave the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
 "        Used to compute margins on sale orders."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__property_account_income_id
+msgid "Income Account"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__incoming_qty
+msgid "Incoming"
 msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__default_code
 msgid "Internal Reference"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__property_stock_inventory
+msgid "Inventory Location"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__valuation
+msgid "Inventory Valuation"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__invoice_policy
+msgid "Invoicing Policy"
 msgstr ""
 
 #. module: doq_2
@@ -357,8 +490,22 @@ msgid "Is a product variant"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__property_account_income_id
+msgid "Keep this field empty to use the default value from the product category."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__property_account_expense_id
+msgid ""
+"Keep this field empty to use the default value from the product category. If anglo-saxon accounting "
+"with automated valuation method is configured, the expense account on the product category will be "
+"used."
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line____last_update
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_genre____last_update
 msgid "Last Modified on"
 msgstr ""
@@ -366,6 +513,7 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__write_uid
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -373,6 +521,7 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__write_date
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__write_date
 msgid "Last Updated on"
 msgstr ""
@@ -394,8 +543,41 @@ msgid "Library member"
 msgstr "Socio"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__line_ids
+msgid "Line"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__lines_ids
+msgid "Lines"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__location_id
+msgid "Location"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__message_main_attachment_id
 msgid "Main Attachment"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__valuation
+msgid ""
+"Manual: The accounting entries to value the inventory are not posted automatically.\n"
+"        Automated: An accounting entry is automatically created to value the inventory when a "
+"product enters or leaves the company.\n"
+"        "
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__service_type
+msgid ""
+"Manually set quantities on order: Invoice based on the manually entered quantity, without creating "
+"an analytic account.\n"
+"Timesheets on contract: Invoice based on the tracked hours on the related timesheet.\n"
+"Create a task and track hours: Create a task on the sales order validation and track the work hours."
 msgstr ""
 
 #. module: doq_2
@@ -416,6 +598,11 @@ msgid "Message Delivery error"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__sale_line_warn_msg
+msgid "Message for Sales Order Line"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__message_ids
 msgid "Messages"
 msgstr ""
@@ -423,6 +610,11 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model,name:doq_2.model_library_book_component_line
 msgid "Model for creating a line for a pack"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model,name:doq_2.model_library_book_pack
+msgid "Model for creating packs of books"
 msgstr ""
 
 #. module: doq_2
@@ -442,9 +634,20 @@ msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__name
+#: model:ir.model.fields,field_description:doq_2.field_library_book_pack__name
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__name
 msgid "Name"
 msgstr "Nombre"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__nbr_moves_in
+msgid "Nbr Moves In"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__nbr_moves_out
+msgid "Nbr Moves Out"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__activity_date_deadline
@@ -472,6 +675,11 @@ msgid "Number of errors"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__nbr_moves_in
+msgid "Number of incoming stock moves in the past 12 months"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__message_needaction_counter
 msgid "Number of messages requiring action"
 msgstr ""
@@ -482,15 +690,37 @@ msgid "Number of messages with delivery error"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__nbr_moves_out
+msgid "Number of outgoing stock moves in the past 12 months"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__pricelist_item_count
 msgid "Number of price rules"
 msgstr ""
 
 #. module: doq_2
-#: model:ir.model.fields,field_description:doq_2.field_library_book__pack_id
+#: model:ir.model.fields,help:doq_2.field_library_book__invoice_policy
+msgid ""
+"Ordered Quantity: Invoice quantities ordered by the customer.\n"
+"Delivered Quantity: Invoice quantities delivered to the customer."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__outgoing_qty
+msgid "Outgoing"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__pack_id
 #: model_terms:ir.ui.view,arch_db:doq_2.record_name_search
 msgid "Pack"
 msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__pack_type
+msgid "Pack Type"
+msgstr "Tipo de pack"
 
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__list_price
@@ -543,6 +773,11 @@ msgid "Product Type"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__property_stock_production
+msgid "Production Location"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__product_variant_ids
 msgid "Products"
 msgstr ""
@@ -568,8 +803,63 @@ msgid "Quantity"
 msgstr "Cantidad"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__qty_available
+msgid "Quantity On Hand"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__visible_qty_configurator
+msgid "Quantity visible in configurator"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__expense_policy
+msgid "Re-Invoice Expenses"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__visible_expense_policy
+msgid "Re-Invoice Policy visible"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__reordering_max_qty
+msgid "Reordering Max Qty"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__reordering_min_qty
+msgid "Reordering Min Qty"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__nbr_reordering_rules
+msgid "Reordering Rules"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__responsible_id
+msgid "Responsible"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__activity_user_id
 msgid "Responsible User"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__route_ids
+msgid "Routes"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__has_available_route_ids
+msgid "Routes can be selected on this product"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__message_has_sms_error
+msgid "SMS Delivery error"
 msgstr ""
 
 #. module: doq_2
@@ -578,8 +868,26 @@ msgid "Sales Description"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__sale_line_warn
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__list_price
 msgid "Sales Price"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__sale_line_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" "
+"will throw an exception with the message and block the flow. The Message has to be written in the "
+"next field."
 msgstr ""
 
 #. module: doq_2
@@ -588,9 +896,36 @@ msgid "Sequence"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_book__pack_type__series
+#: model_terms:ir.ui.view,arch_db:doq_2.record_name_search
+msgid "Series"
+msgstr "Saga"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__show_forecasted_qty_status_button
+msgid "Show Forecasted Qty Status Button"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__show_on_hand_qty_status_button
+msgid "Show On Hand Qty Status Button"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__sales_count
 #: model:ir.model.fields,field_description:doq_2.field_library_book__sold
 msgid "Sold"
 msgstr "Vendido"
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__cost_method
+msgid ""
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company "
+"first will also leave it first.\n"
+"        "
+msgstr ""
 
 #. module: doq_2
 #: model_terms:ir.actions.act_window,help:doq_2.record_name
@@ -609,6 +944,47 @@ msgid ""
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
 "Planned: Future activities."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__account_tag_ids
+msgid "Tags to be set on the base and tax journal items created for this product."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__tax_string
+msgid "Tax String"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__property_stock_production
+msgid ""
+"This stock location will be used, instead of the default one, as the source location for stock "
+"moves generated by manufacturing orders."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__property_stock_inventory
+msgid ""
+"This stock location will be used, instead of the default one, as the source location for stock "
+"moves generated when you do an inventory."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__responsible_id
+msgid ""
+"This user will be responsible of the next activities related to logistic operations for this "
+"product."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__service_type
+msgid "Track Service"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__tracking
+msgid "Tracking"
 msgstr ""
 
 #. module: doq_2
@@ -642,6 +1018,11 @@ msgid "Variant Seller"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__seller_ids
 msgid "Vendors"
 msgstr ""
@@ -654,6 +1035,21 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__volume_uom_name
 msgid "Volume unit of measure label"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__website_message_ids
+msgid "Website communication history"
 msgstr ""
 
 #. module: doq_2
