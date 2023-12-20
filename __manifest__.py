@@ -5,7 +5,7 @@
     "name": "Library",
     "summary": "Librería en odoo",
     "version": "16.0.1.0.0",
-    "category": "Sistema DOQ",
+    "category": "Library",
     "website": "https://www.qubiq.es",
     "author": "QubiQ",
     "license": "AGPL-3",
@@ -16,5 +16,7 @@
         'views/book_library.xml',
         'views/genres_library.xml',
         'views/res_partner.xml',
+        'views/audit_library.xml',
+        'security/security.xml',
         'security/ir.model.access.csv'],
 }

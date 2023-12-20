@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-13 12:01+0000\n"
-"PO-Revision-Date: 2023-12-14 10:27+0100\n"
+"POT-Creation-Date: 2023-12-19 12:59+0000\n"
+"PO-Revision-Date: 2023-12-19 14:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -73,8 +73,28 @@ msgid "Activity Type Icon"
 msgstr ""
 
 #. module: doq_2
+#: model:res.groups,name:doq_2.group_library_admin
+msgid "Administrator"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__message_attachment_count
 msgid "Attachment Count"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.show_audit
+msgid "Audit"
+msgstr "Auditoría"
+
+#. module: doq_2
+#: model_terms:ir.actions.act_window,help:doq_2.show_audit
+msgid "Audit registry empty."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.ui.menu,name:doq_2.library_audit_data_menu
+msgid "Auditoría"
 msgstr ""
 
 #. module: doq_2
@@ -105,6 +125,11 @@ msgstr "Autores"
 #: model:ir.model.fields,field_description:doq_2.field_library_book__barcode
 msgid "Barcode"
 msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__book_id
+msgid "Book"
+msgstr "Libro"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_res_partner__book_author
@@ -149,6 +174,11 @@ msgid "Category Routes"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.module.category,description:doq_2.module_category_library
+msgid "Category for the library "
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__pack_type__colection
 #: model_terms:ir.ui.view,arch_db:doq_2.record_name_search
 msgid "Colection"
@@ -190,6 +220,12 @@ msgid "Costing Method"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_audit__operation__create
+msgid "Create"
+msgstr "Crear"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__create_uid
@@ -198,6 +234,7 @@ msgid "Created by"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__create_date
@@ -226,6 +263,7 @@ msgid "Data"
 msgstr "Datos"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__date
 #: model:ir.model.fields,field_description:doq_2.field_library_book__date
 msgid "Date"
 msgstr "Fecha"
@@ -290,9 +328,10 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__book_type__digital
 msgid "Digital"
-msgstr "Digital"
+msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__display_name
@@ -372,6 +411,7 @@ msgid "Has Message"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__id
@@ -503,6 +543,7 @@ msgid ""
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack____last_update
@@ -511,6 +552,7 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__write_uid
@@ -519,6 +561,7 @@ msgid "Last Updated by"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__write_date
@@ -527,6 +570,7 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.module.category,name:doq_2.module_category_library
 #: model:ir.ui.menu,name:doq_2.library_book_main_menu
 msgid "Library"
 msgstr "Librería"
@@ -605,6 +649,11 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__message_ids
 msgid "Messages"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model,name:doq_2.model_library_audit
+msgid "Model for auditing the library."
 msgstr ""
 
 #. module: doq_2
@@ -700,6 +749,11 @@ msgid "Number of price rules"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__operation
+msgid "Operation"
+msgstr "Operación"
+
+#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__invoice_policy
 msgid ""
 "Ordered Quantity: Invoice quantities ordered by the customer.\n"
@@ -723,9 +777,9 @@ msgid "Pack Type"
 msgstr "Tipo de pack"
 
 #. module: doq_2
-#: model:ir.model.fields,help:doq_2.field_library_book__list_price
-msgid "Price at which the product is sold to customers."
-msgstr ""
+#: model:ir.model.fields,field_description:doq_2.field_library_book__list_price
+msgid "Price"
+msgstr "Precio"
 
 #. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__book_type__printed
@@ -878,11 +932,6 @@ msgid "Sales Order Line"
 msgstr ""
 
 #. module: doq_2
-#: model:ir.model.fields,field_description:doq_2.field_library_book__list_price
-msgid "Sales Price"
-msgstr ""
-
-#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__sale_line_warn
 msgid ""
 "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" "
@@ -899,7 +948,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__pack_type__series
 #: model_terms:ir.ui.view,arch_db:doq_2.record_name_search
 msgid "Series"
-msgstr "Saga"
+msgstr "Sagas"
+
+#. module: doq_2
+#: model:ir.ui.menu,name:doq_2.library_settings_menu
+msgid "Settings"
+msgstr "Ajustes"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__show_forecasted_qty_status_button
@@ -1008,6 +1062,16 @@ msgid "Unit of Measure Name"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_audit__operation__unlink
+msgid "Unlink"
+msgstr "Borrar"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__valid_product_template_attribute_line_ids
 msgid "Valid Product Attribute Lines"
 msgstr ""
@@ -1061,3 +1125,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__weight_uom_name
 msgid "Weight unit of measure label"
 msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_audit__operation__write
+msgid "Write"
+msgstr "Cambiar"
