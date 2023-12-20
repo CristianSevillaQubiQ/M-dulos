@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+    <record id="module_category_library" model="ir.module.category">
+        <field name="name">Library</field>
+        <field name="description">Category for the library </field>
+        <field name="sequence">8</field>
+    </record>
+        
+    </data>
+
+    <record id="group_library_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="module_category_library"/>
+    </record>
+
+</odoo>

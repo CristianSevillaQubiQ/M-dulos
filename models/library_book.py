@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import AccessError, UserError, ValidationError
 
 class books(models.Model):
     _name = 'library.book'
@@ -14,7 +15,7 @@ class books(models.Model):
     # Nombre del libro, caracteres
     # name = fields.Char(related='product_tmpl_id.name', string="Name", required=True, store=False)
     # Precio, numeros con decimales
-    # price = fields.Float(string="Price")
+    list_price = fields.Float(string="Price")
     
     
     # Edición, numeros enteros
@@ -48,5 +49,48 @@ class books(models.Model):
     def _onchange_is_in_pack(self):
         if self.is_in_pack == False:
             self.pack_type = "" # SI desmarco el check de que esta en un pack, el tipo de pack se vacia
+            
+    @api.constrains('list_price')
+    def check_price(self):
+        if self.list_price < 0:
+            raise UserError("The price cannot be lower than 0.") 
     
+    @api.model
+    def create(self, values):
+        res = super().create(values)
+        vals_audit = {
+            'user_id': self.env.user.id, # Modelo 'res.users' en el campo, se le introduce una ID de usuario.
+            'operation': 'create',
+            'date': fields.Datetime.now(),
+            'book_id': res.name
+            }
+        
+        self.env['library.audit'].create(vals_audit) 
+        return res
+
+
+    def unlink(self):
+        for record in self:
+            vals_audit = {
+                'user_id': self.env.uid,
+                'operation': 'unlink',
+                'date': fields.Datetime.now(),
+                'book_id': record.name
+                }
+            
+            res = super(books, record).unlink() # solo devuelve true si puede eliminar, error si no
+            self.env['library.audit'].create(vals_audit)
+        return res
     
+    def write(self, values):
+        res = super().write(values)
+        vals_audit = {
+            'user_id': self.env.uid,
+            'operation': 'write',
+            'date': fields.Datetime.now(),
+            'book_id': self.name
+            }
+        
+        self.env['library.audit'].create(vals_audit)
+        return res
+
