@@ -18,5 +18,8 @@
         'views/res_partner.xml',
         'views/audit_library.xml',
         'security/security.xml',
-        'security/ir.model.access.csv'],
+        'security/ir.model.access.csv',
+        'views/reports.xml',
+        'views/report_library_book.xml',
+        'views/report_sale.xml'],
 }

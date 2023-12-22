@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_library_book">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="doq_2.report_library_book_document"/>
+            </t>
+        </t>
+    </template>
+
+   
+
+    <template id="report_library_book_document">
+        <t t-call="web.external_layout">
+            <!-- <p style="text-align: center;">&nbsp;</p> -->
+            <h4>Title:</h4>
+            <span t-field="o.name"/>
+            <br/>
+            <span t-field="o.image_1920" t-options='{"widget": "image"}'/>
+
+            <style>
+                .subtitle_margin{margin-top: 30px;}
+            </style>
+
+            <h4 class="subtitle_margin">Author:</h4>
+            <t t-if="o.authors_ids">
+                <span t-field="o.authors_ids"/>
+            </t>
+
+            <t t-if="not o.authors_ids">
+                <p>null</p>
+            </t>
+            
+
+            <h4 class="subtitle_margin">Publication date:</h4>
+            <t t-if="o.date">
+                <span t-field="o.date"/>
+            </t>
+
+            <t t-if="not o.date">
+                <p>null</p>
+            </t>
+
+            
+
+            <h4 class="subtitle_margin">Synopsis:</h4>
+            <t t-if="o.synopsis">
+                <span t-field="o.synopsis"/>
+            </t>
+
+            <t t-if="not o.synopsis">
+                <p>null</p>
+            </t>
+
+        </t>
+    </template>
+
+
+</odoo>

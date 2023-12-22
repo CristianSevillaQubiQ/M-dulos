@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="book_custom_report" model="ir.actions.report">
+            <field name="name">Portfolios</field>
+            <field name="model">library.book</field>
+            <field name="report_type">qweb-pdf</field> <!-- qweb-pdf -->
+            <field name="report_name">doq_2.report_library_book</field>
+            <field name="report_file">doq_2.report_library_book</field>
+            <field name="print_report_name">(object.name + "_book_report")</field>
+            <field name="binding_model_id" ref="model_library_book"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>   
+</odoo>
