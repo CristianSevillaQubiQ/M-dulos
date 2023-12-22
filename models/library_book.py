@@ -38,6 +38,10 @@ class books(models.Model):
     is_in_pack = fields.Boolean()
     pack_type = fields.Selection(selection=[('colection', 'Colection'), ('series', 'Series')], default='colection') # COlecciones o sagas
     
+    # sinopsis
+    synopsis = fields.Html(string="Synopsis")
+    
+    
     
     line_ids = fields.One2many(comodel_name='library.book.component.line', inverse_name='component_id')
     

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-19 12:59+0000\n"
-"PO-Revision-Date: 2023-12-19 14:07+0100\n"
+"POT-Creation-Date: 2023-12-22 11:36+0000\n"
+"PO-Revision-Date: 2023-12-22 12:40+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -21,6 +21,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__product_variant_count
 msgid "# Product Variants"
 msgstr ""
+
+#. module: doq_2
+#: model:ir.actions.report,print_report_name:doq_2.book_custom_report
+msgid "(object.name + \"_book_report\")"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.custom_report_sale
+msgid "<strong>Client member ID:</strong>"
+msgstr "ID miembro"
 
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__description_sale
@@ -73,6 +83,11 @@ msgid "Activity Type Icon"
 msgstr ""
 
 #. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_book_view_form
+msgid "Aditional information"
+msgstr "Información adicional"
+
+#. module: doq_2
 #: model:res.groups,name:doq_2.group_library_admin
 msgid "Administrator"
 msgstr ""
@@ -115,6 +130,11 @@ msgid "Author Surname"
 msgstr "Apellido"
 
 #. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
+msgid "Author:"
+msgstr "Autor:"
+
+#. module: doq_2
 #: model:ir.actions.act_window,name:doq_2.base_view_res_partner_author_filter
 #: model:ir.model.fields,field_description:doq_2.field_library_book__authors_ids
 #: model:ir.ui.menu,name:doq_2.library_authors_data_menu
@@ -152,6 +172,11 @@ msgstr "Tipo de libro"
 #: model:ir.ui.menu,name:doq_2.library_books_data_menu
 msgid "Books"
 msgstr "Libros"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_book_view_form
+msgid "Buy information"
+msgstr "Compra"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__can_image_1024_be_zoomed
@@ -265,6 +290,7 @@ msgstr "Datos"
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__date
 #: model:ir.model.fields,field_description:doq_2.field_library_book__date
+#: model_terms:ir.ui.view,arch_db:doq_2.library_book_view_form
 msgid "Date"
 msgstr "Fecha"
 
@@ -777,6 +803,11 @@ msgid "Pack Type"
 msgstr "Tipo de pack"
 
 #. module: doq_2
+#: model:ir.actions.report,name:doq_2.book_custom_report
+msgid "Portfolios"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__list_price
 msgid "Price"
 msgstr "Precio"
@@ -800,6 +831,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__categ_id
 msgid "Product Category"
 msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_book_view_form
+msgid "Product Name"
+msgstr "Nombre"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__packaging_ids
@@ -835,6 +871,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__product_variant_ids
 msgid "Products"
 msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
+msgid "Publication date:"
+msgstr "Fecha de publicación:"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__description_purchase
@@ -1001,6 +1042,16 @@ msgid ""
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__synopsis
+msgid "Synopsis"
+msgstr "Sinopsis"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
+msgid "Synopsis:"
+msgstr "Sinopsis:"
+
+#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__account_tag_ids
 msgid "Tags to be set on the base and tax journal items created for this product."
 msgstr ""
@@ -1030,6 +1081,11 @@ msgid ""
 "This user will be responsible of the next activities related to logistic operations for this "
 "product."
 msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
+msgid "Title:"
+msgstr "Título:"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__service_type
@@ -1130,3 +1186,13 @@ msgstr ""
 #: model:ir.model.fields.selection,name:doq_2.selection__library_audit__operation__write
 msgid "Write"
 msgstr "Cambiar"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_book_view_form
+msgid "e.g. Cheese Burger"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
+msgid "null"
+msgstr ""

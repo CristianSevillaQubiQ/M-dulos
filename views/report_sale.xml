@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="external_layout_footer_inherit" inherit_id="web.external_layout_standard">
+        <xpath expr="//div/div[@class=('text-muted')]" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+
+    </template>
+    
+
+    <template id="custom_report_sale" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@t-if='doc.user_id.name']" position="inside">
+            <t t-if="doc.partner_id.library_member">
+                <strong>Client member ID:</strong>
+                <p class="m-0" t-field="doc.partner_id.member_ID"/>
+            </t>
+        </xpath>
+
+    </template>
+
+</odoo>

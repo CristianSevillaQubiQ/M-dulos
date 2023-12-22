@@ -8,33 +8,53 @@
         <field name="arch" type="xml">
             <form string="">                <!--form, es para la entrada de datos de un libro-->
                 <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
+                    <div class="oe_title">
+                        <label for="name" string="Product Name"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field name="priority" widget="priority" class="me-3"/>
+                                <field class="text-break" name="name" placeholder="e.g. Cheese Burger"/>
+                            </div>
+                        </h1>
+                    </div>
                     <group>
                         <group>
-                            <field name="name" required="1" readonly="0"/>       
                             <field name="authors_ids" string="Author"></field>
                             <field name="list_price"/>
-                            <field name="edition"/>
                             <field name="book_type"/>
-                        </group>
-                        <group>
-                            <field name="buy_link"/>
-                            <field name="sold"/>
-                            <field name="date"/>
-                            <field name="genres_ids" widget="many2many_tags"></field>
                             <field name="is_in_pack"></field>
                             <field name="pack_type" attrs="{ 'invisible': [('is_in_pack', '=', False)] }"/>
                         </group>
-                        <notebook>
-                            <page name="Pack" attrs="{ 'invisible': [('is_in_pack', '=', False)] }">
-                                <field name="line_ids">
-                                    <tree>
-                                        <field name="component_id" />
-                                        <field name="quantity" />
-                                    </tree>
-                                </field>
-                            </page>
-                        </notebook>
                     </group>
+
+                                 
+                    <notebook>
+                        <page name="aditional_information" string="Aditional information">
+                            <group>
+                                <field name="genres_ids" widget="many2many_tags"></field>
+                                <field name="date" string="Date"/>
+                                <field name="edition"/>
+                                <field name="synopsis"/>
+                            </group>
+                            
+                        </page>
+                        <page name="buy_information" string="Buy information">
+                            <group>
+                                <field name="buy_link"/>
+                                <field name="sold"/>  
+                            </group>                               
+                        </page>
+                        <page name="Pack" attrs="{ 'invisible': [('is_in_pack', '=', False)] }">
+                            <field name="line_ids">
+                                <tree>
+                                    <field name="component_id" />
+                                    <field name="quantity" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    
                 </sheet>
             </form>
         </field>
