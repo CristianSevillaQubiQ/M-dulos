@@ -22,8 +22,25 @@
             <xpath expr="//field[@name='member_ID']" position="after">
                 <field name="genres_ids" widget="many2many_tags" attrs="{ 'invisible': [('book_author', '=', False)] }"></field>
             </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button string="Remove" class="btn-primary" name="launch_wizard" type="object" attrs="{ 'invisible': [('library_member', '=', False)] }"/>
+                </header>
+            </xpath>
         </field>
     </record>
+
+    <record id="sequence_member_ID" model="ir.sequence">
+        <field name="name">Secuencia de member_ID</field>
+        <field name="code">member.lfpv</field>
+        <field name="active">True</field>
+        <field name="prefix">SOC_</field>
+        <field name="padding">6</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
 
 
 

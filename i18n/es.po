@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-22 11:36+0000\n"
-"PO-Revision-Date: 2023-12-22 12:40+0100\n"
+"POT-Creation-Date: 2024-01-09 10:38+0000\n"
+"PO-Revision-Date: 2024-01-09 11:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -148,6 +148,9 @@ msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__book_id
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__book
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__book
+#: model:ir.model.fields,field_description:doq_2.field_return_book__book
 msgid "Book"
 msgstr "Libro"
 
@@ -192,6 +195,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__sale_ok
 msgid "Can be Sold"
 msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.wizard_members_view_form
+#: model_terms:ir.ui.view,arch_db:doq_2.wizard_rent_view_form
+#: model_terms:ir.ui.view,arch_db:doq_2.wizard_return_view_form
+msgid "Cancel"
+msgstr "Cancelar"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__route_from_categ_ids
@@ -250,20 +260,28 @@ msgid "Create"
 msgstr "Crear"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__create_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__create_uid
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__create_uid
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__create_uid
+#: model:ir.model.fields,field_description:doq_2.field_return_book__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__create_date
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__create_date
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__create_date
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__create_date
+#: model:ir.model.fields,field_description:doq_2.field_return_book__create_date
 msgid "Created on"
 msgstr ""
 
@@ -280,6 +298,11 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__taxes_id
 msgid "Customer Taxes"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.wizard_members_view_form
+msgid "Dar de baja"
 msgstr ""
 
 #. module: doq_2
@@ -352,16 +375,26 @@ msgid "Description on Receptions"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__devolution_date
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__devolution_date
+msgid "Devolution Date"
+msgstr "Fecha de devolución"
+
+#. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__book_type__digital
 msgid "Digital"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__display_name
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__display_name
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__display_name
+#: model:ir.model.fields,field_description:doq_2.field_return_book__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -437,11 +470,20 @@ msgid "Has Message"
 msgstr ""
 
 #. module: doq_2
+#: model_terms:ir.actions.act_window,help:doq_2.record_rent
+msgid "Here you can see the rents users take."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__id
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__id
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__id
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__id
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__id
+#: model:ir.model.fields,field_description:doq_2.field_return_book__id
 msgid "ID"
 msgstr ""
 
@@ -569,29 +611,41 @@ msgid ""
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_audit____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_genre____last_update
+#: model:ir.model.fields,field_description:doq_2.field_library_rent____last_update
+#: model:ir.model.fields,field_description:doq_2.field_rent_book____last_update
+#: model:ir.model.fields,field_description:doq_2.field_return_book____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__write_uid
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__write_uid
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__write_uid
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__write_uid
+#: model:ir.model.fields,field_description:doq_2.field_return_book__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__write_date
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__write_date
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__write_date
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__write_date
+#: model:ir.model.fields,field_description:doq_2.field_return_book__write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -703,6 +757,11 @@ msgid "Model for registering genres."
 msgstr "Modelo para registrar géneros."
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_library_rent
+msgid "Model for renting books."
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__my_activity_date_deadline
 msgid "My Activity Deadline"
 msgstr ""
@@ -801,6 +860,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__pack_type
 msgid "Pack Type"
 msgstr "Tipo de pack"
+
+#. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_rent__state__pending
+msgid "Pending"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.actions.report,name:doq_2.book_custom_report
@@ -918,6 +982,38 @@ msgid "Re-Invoice Policy visible"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__reason
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_partner_member_view
+msgid "Remove"
+msgstr "Eliminar"
+
+#. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.record_rent model:ir.ui.menu,name:doq_2.library_rent_record
+#: model:ir.ui.menu,name:doq_2.rent model_terms:ir.ui.view,arch_db:doq_2.wizard_rent_view_form
+msgid "Rent"
+msgstr "Alquileres"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__rent_date
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__rent_date
+msgid "Rent Date"
+msgstr "Fecha de alquiler"
+
+#. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.wizzard_rent
+msgid "Rent books"
+msgstr "Alquiler de libros"
+
+#. module: doq_2
+#: model:ir.ui.menu,name:doq_2.rent_wizard
+msgid "Rent record"
+msgstr "Historial de alquileres"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__reordering_max_qty
 msgid "Reordering Max Qty"
 msgstr ""
@@ -941,6 +1037,21 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__activity_user_id
 msgid "Responsible User"
 msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.wizard_return_view_form
+msgid "Return"
+msgstr "Devolver"
+
+#. module: doq_2
+#: model:ir.model.fields.selection,name:doq_2.selection__library_rent__state__returned
+msgid "Returned"
+msgstr "Devuelto"
+
+#. module: doq_2
+#: model:ir.ui.menu,name:doq_2.library_returns_record
+msgid "Returns"
+msgstr "Devoluciones"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__route_ids
@@ -1033,6 +1144,11 @@ msgid "Start adding some genres"
 msgstr "Empieza añadiendo géneros"
 
 #. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.rented_record_name_search
+msgid "State"
+msgstr "Estado"
+
+#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__activity_state
 msgid ""
 "Status based on activities\n"
@@ -1123,7 +1239,11 @@ msgid "Unlink"
 msgstr "Borrar"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_finish_subscription__user_id
 #: model:ir.model.fields,field_description:doq_2.field_library_audit__user_id
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__user_id
+#: model:ir.model.fields,field_description:doq_2.field_rent_book__user_id
+#: model:ir.model.fields,field_description:doq_2.field_return_book__user_id
 msgid "User"
 msgstr "Usuario"
 
@@ -1183,6 +1303,21 @@ msgid "Weight unit of measure label"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_finish_subscription
+msgid "Wizard finish member subscription"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model,name:doq_2.model_rent_book
+msgid "Wizard for renting books."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model,name:doq_2.model_return_book
+msgid "Wizard for returning books."
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_audit__operation__write
 msgid "Write"
 msgstr "Cambiar"
@@ -1195,4 +1330,14 @@ msgstr ""
 #. module: doq_2
 #: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
 msgid "null"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.wizzard_return
+msgid "return book"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_rent__state
+msgid "state"
 msgstr ""

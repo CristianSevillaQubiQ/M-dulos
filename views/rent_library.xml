@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- library.book tree view -->
+    <record id="library_rent_view_tree" model="ir.ui.view">
+        <field name="name">library.rent.view.tree</field>
+        <field name="model">library.rent</field>
+        <field name="arch" type="xml">
+            <tree default_order="devolution_date asc">                <!-- tree es para la vista de los libros registrados -->
+                <field name="user_id" />
+                <field name="book" />
+                <field name="rent_date" />
+                <field name="devolution_date" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="rented_record_name_search" model="ir.ui.view">
+        <field name="name">library.rent.search</field>
+        <field name="model">library.rent</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="state_filter" string="State" domain="[('state', '=', 'pending')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="record_rent" model="ir.actions.act_window">
+        <field name="name">Rent</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.rent</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{"search_default_state_filter":1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Here you can see the rents users take.
+            </p>
+            <p>
+            </p>
+        </field>
+
+    </record>
+
+    
+
+</odoo>

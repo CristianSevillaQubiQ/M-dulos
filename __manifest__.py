@@ -13,6 +13,12 @@
     "installable": True,
     "depends": ['base', 'product', 'sale'],
     "data": [
+        'wizards/finish_subscription.xml',
+        'wizards/rent_book.xml',
+        'wizards/return_wizard.xml',
+        
+        'views/rent_library.xml',
+        
         'views/book_library.xml',
         'views/genres_library.xml',
         'views/res_partner.xml',

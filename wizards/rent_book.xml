@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="wizard_rent_view_form" model="ir.ui.view">
+        <field name="name">wizard_rent_view_form</field>
+        <field name="model">rent.book</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="user_id" required="1"/>
+                        <field name="book" required="1"/>
+                        <field name="rent_date" readonly="1" required="1"/>
+                        <field name="devolution_date" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="create_rent" string="Rent" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizzard_rent" model="ir.actions.act_window">
+        <field name="name">Rent books</field>
+        <field name="res_model">rent.book</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field> 
+    </record>
+
+</odoo>
