@@ -31,4 +31,5 @@
     <menuitem id="library_settings_menu" parent="library_book_main_menu" name="Settings" sequence="2"/>
     <menuitem id="library_audit_data_menu" parent="library_settings_menu" name="Auditoría" action="show_audit" sequence="1"/>
 
+
 </odoo>

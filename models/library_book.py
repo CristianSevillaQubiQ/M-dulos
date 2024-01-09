@@ -8,7 +8,7 @@ class books(models.Model):
     
     # delegation inheritance
     product_tmpl_id = fields.Many2one('product.template', string='Product Template', delegate=True, required=True, ondelete='cascade') #, ondelete='cascade'
-    
+    barcode = fields.Char()
     
     
     # Estos hay que dejarlos comentados dado que ya existen en el modelo que importamos (product.template)
@@ -98,3 +98,19 @@ class books(models.Model):
         self.env['library.audit'].create(vals_audit)
         return res
 
+    def name_get(self):
+        res = []
+        for book in self:
+            res.append((book.id, '[%s] %s' % (book.barcode,book.name)))
+        return res
+    
+    @api.model
+    def name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+        args = args or []
+        
+        if name:
+            records = self.search(['|',('name', operator, name), ('barcode', operator, name)])
+            return records.name_get()
+        
+        return self.env['library.book'].search([('name', operator, name)]+args, limit=limit).name_get()
+    

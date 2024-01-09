@@ -25,6 +25,7 @@
                             <field name="book_type"/>
                             <field name="is_in_pack"></field>
                             <field name="pack_type" attrs="{ 'invisible': [('is_in_pack', '=', False)] }"/>
+                            <field name="barcode" />
                         </group>
                     </group>
 
@@ -110,6 +111,12 @@
     <!-- Submenu -->
     <menuitem id="library_data_menu" parent="library_book_main_menu" name="Data" sequence="1"/>
     <menuitem id="library_books_data_menu" parent="library_data_menu" name="Books" action="record_name" sequence="1"/>
+    
 
+
+    <menuitem id="rent" parent="library_book_main_menu" name="Rent" sequence="1" />
+    <menuitem id="library_rent_record" parent="rent" name="Rent" action="wizzard_rent" sequence="1"/>
+    <menuitem id="rent_wizard" parent="rent" name="Rent record" action="record_rent" sequence="3"/>
+    <menuitem id="library_returns_record" parent="rent" name="Returns" action="wizzard_return" sequence="2"/>
 
 </odoo>
