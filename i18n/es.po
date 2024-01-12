@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 10:38+0000\n"
-"PO-Revision-Date: 2024-01-09 11:44+0100\n"
+"POT-Creation-Date: 2024-01-12 10:28+0000\n"
+"PO-Revision-Date: 2024-01-12 11:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -25,6 +25,16 @@ msgstr ""
 #. module: doq_2
 #: model:ir.actions.report,print_report_name:doq_2.book_custom_report
 msgid "(object.name + \"_book_report\")"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_partner_member_view
+msgid "<span class=\"o_stat_text\">Libros prestados</span>"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_partner_member_view
+msgid "<span class=\"o_stat_text\">Total libros vendidos</span>"
 msgstr ""
 
 #. module: doq_2
@@ -426,6 +436,12 @@ msgid "Favorite"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__first_name
+#: model:ir.model.fields,field_description:doq_2.field_res_users__first_name
+msgid "First Name"
+msgstr "Nombre"
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__message_follower_ids
 msgid "Followers"
 msgstr ""
@@ -770,6 +786,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__name
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__name
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__name
+#: model:ir.model.fields,field_description:doq_2.field_res_users__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -796,6 +814,17 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__activity_type_id
 msgid "Next Activity Type"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__not_rented_books
+#: model:ir.model.fields,field_description:doq_2.field_res_users__not_rented_books
+msgid "Not Rented Books"
+msgstr "Libros no alquilados"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_partner_member_view
+msgid "Not rented Books"
 msgstr ""
 
 #. module: doq_2
@@ -872,9 +901,9 @@ msgid "Portfolios"
 msgstr ""
 
 #. module: doq_2
-#: model:ir.model.fields,field_description:doq_2.field_library_book__list_price
-msgid "Price"
-msgstr "Precio"
+#: model:ir.model.fields,help:doq_2.field_library_book__list_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_book__book_type__printed
@@ -1014,6 +1043,12 @@ msgid "Rent record"
 msgstr "Historial de alquileres"
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__rented_books_count
+#: model:ir.model.fields,field_description:doq_2.field_res_users__rented_books_count
+msgid "Rented Books Count"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__reordering_max_qty
 msgid "Reordering Max Qty"
 msgstr ""
@@ -1042,6 +1077,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:doq_2.wizard_return_view_form
 msgid "Return"
 msgstr "Devolver"
+
+#. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.wizzard_return
+msgid "Return book"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields.selection,name:doq_2.selection__library_rent__state__returned
@@ -1084,6 +1124,17 @@ msgid "Sales Order Line"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__list_price
+msgid "Sales Price"
+msgstr "Precio"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__second_name
+#: model:ir.model.fields,field_description:doq_2.field_res_users__second_name
+msgid "Second Name"
+msgstr "Apellido"
+
+#. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__sale_line_warn
 msgid ""
 "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" "
@@ -1122,6 +1173,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__sold
 msgid "Sold"
 msgstr "Vendido"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_partner__sold_books_count
+#: model:ir.model.fields,field_description:doq_2.field_res_users__sold_books_count
+msgid "Sold Books Count"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,help:doq_2.field_library_book__cost_method
@@ -1330,11 +1387,6 @@ msgstr ""
 #. module: doq_2
 #: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
 msgid "null"
-msgstr ""
-
-#. module: doq_2
-#: model:ir.actions.act_window,name:doq_2.wizzard_return
-msgid "return book"
 msgstr ""
 
 #. module: doq_2

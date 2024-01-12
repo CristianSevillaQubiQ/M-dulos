@@ -15,7 +15,7 @@ class books(models.Model):
     # Nombre del libro, caracteres
     # name = fields.Char(related='product_tmpl_id.name', string="Name", required=True, store=False)
     # Precio, numeros con decimales
-    list_price = fields.Float(string="Price")
+    #list_price = fields.Float(string="Price")
     
     
     # Edición, numeros enteros
@@ -40,10 +40,13 @@ class books(models.Model):
     
     # sinopsis
     synopsis = fields.Html(string="Synopsis")
-    
-    
-    
     line_ids = fields.One2many(comodel_name='library.book.component.line', inverse_name='component_id')
+    
+    
+    
+    @api.onchange("authors_ids")
+    def change_genres(self):
+        return {'domain': {'genres_ids': [('genres_ids','in',self.env['res.partner'].search([('name','=',self.authors_ids.name)]))]}}
     
     @api.onchange('authors_ids')
     def _onchange_genres_ids(self):
