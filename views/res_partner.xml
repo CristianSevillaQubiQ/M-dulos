@@ -5,9 +5,16 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="not_rented_books" string="Not rented Books">
+                        <field name="not_rented_books" widget="many2one_list"/>
+                </page>
+            </notebook>
             <xpath expr="//field[@name='vat']" position="before">
                 <field name="author_name" attrs="{ 'invisible': [('book_author', '=', False)] }"></field>
                 <field name="author_surname" attrs="{ 'invisible': [('book_author', '=', False)] }"></field>
+                <field name="first_name" attrs="{ 'invisible': [('library_member', '=', False)] }"></field>
+                <field name="second_name" attrs="{ 'invisible': [('library_member', '=', False)] }"></field>
             </xpath>
             
             <xpath expr="//field[@name='vat']" position="after">
@@ -28,6 +35,26 @@
                     <button string="Remove" class="btn-primary" name="launch_wizard" type="object" attrs="{ 'invisible': [('library_member', '=', False)] }"/>
                 </header>
             </xpath>
+
+            <div class="oe_button_box" name="button_box"> <!-- smart button socios, numero de libros alquilados -->
+                <button name="view_member_books" type="object" class="oe_start_button" icon="fa-book" attrs="{ 'invisible': ['|', ('library_member', '=', False), ('rented_books_count', '=', 0)] }">
+                    <div class="o_stat_info">
+                        <field name="rented_books_count" class="o_stat_value"/>
+                        <span class="o_stat_text">Libros prestados</span>
+                    </div>
+                </button>
+            </div>      
+
+            <div class="oe_button_box" name="button_box"> <!-- smart button autores, total de dinero vendido en libros -->
+                <button name="view_member_books" type="object" class="oe_start_button" icon="fa-book" attrs="{ 'invisible': [('book_author', '=', False)] }">
+                    <div class="o_stat_info">
+                        <field name="sold_books_count" class="o_stat_value"/>
+                        <span class="o_stat_text">Total libros vendidos</span>
+                    </div>
+                </button>
+            </div>     
+            
+
         </field>
     </record>
 

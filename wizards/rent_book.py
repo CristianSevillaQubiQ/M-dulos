@@ -19,9 +19,7 @@ class rent_book(models.TransientModel):
     
 
     
-    def create_rent(self):            
-        print(self.user_id.id)
-        print(self.book.id)
+    def create_rent(self):
         if( len(self.env['library.rent'].search([('user_id', '=', self.user_id.id), ('state', '=', 'pending')])) < 2 ):
             
             if( (len(self.env['library.rent'].search([('user_id', '=', self.user_id.id), ('state', '=', 'pending'), ('book', '=', self.book.id)]))) >= 1):
