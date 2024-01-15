@@ -1,9 +1,11 @@
 from odoo import api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
+
 class books(models.Model):
     _name = 'library.book'
     _inherits = {'product.template': 'product_tmpl_id'}
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'library.abstract']
     _description = 'Model for registering books.'
     
     # delegation inheritance
