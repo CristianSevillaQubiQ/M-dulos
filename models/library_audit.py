@@ -9,5 +9,7 @@ class audit(models.Model):
     
     operation = fields.Selection(selection=[('create', 'Create'), ('write', 'Write'), ('unlink', 'Unlink')])
     date = fields.Datetime(default=fields.Datetime.now)
-    book_id = fields.Char()
+    #book_id = fields.Char()
+    res_id = fields.Integer()
+    res_model = fields.Char()
     

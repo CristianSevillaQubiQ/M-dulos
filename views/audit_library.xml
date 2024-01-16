@@ -5,10 +5,12 @@
         <field name="model">library.audit</field>
         <field name="arch" type="xml">
             <tree editable="top" create="0" edit="1">                <!-- tree es para la vista de los libros registrados -->
-                <field name="book_id"/>
+                <!--<field name="book_id"/>-->
                 <field name="operation"/>
                 <field name="user_id"/>
                 <field name="date"/>
+                <field name="res_model" />
+                <field name="res_id" />
             </tree>
         </field>
     </record>

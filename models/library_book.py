@@ -1,9 +1,11 @@
 from odoo import api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
-class books(models.Model):
+
+class book(models.Model):
     _name = 'library.book'
     _inherits = {'product.template': 'product_tmpl_id'}
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'library.audit.mixing']
     _description = 'Model for registering books.'
     
     # delegation inheritance
@@ -62,7 +64,9 @@ class books(models.Model):
         if self.list_price < 0:
             raise UserError("The price cannot be lower than 0.") 
     
-    @api.model
+    
+    
+    """@api.model
     def create(self, values):
         res = super().create(values)
         vals_audit = {
@@ -74,7 +78,6 @@ class books(models.Model):
         
         self.env['library.audit'].create(vals_audit) 
         return res
-
 
     def unlink(self):
         for record in self:
@@ -99,7 +102,7 @@ class books(models.Model):
             }
         
         self.env['library.audit'].create(vals_audit)
-        return res
+        return res"""
 
     def name_get(self):
         res = []
