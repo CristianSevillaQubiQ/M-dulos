@@ -2,8 +2,8 @@ from odoo import api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
 class ResPartner(models.Model):
-    #_name = 'res.partner'
-    _inherit = 'res.partner'
+    _name = 'res.partner'
+    _inherit = ['library.audit.mixing', 'res.partner']
     author_name = fields.Char()
     author_surname = fields.Char()
     book_author = fields.Boolean()
@@ -32,16 +32,13 @@ class ResPartner(models.Model):
     def _compute_author_not_rented_books(self):
         for record in self:
             authors_total_book_list = self.env['library.book'].search([('authors_ids','=',record.id)]).mapped('id') # todos los libros del autor
-            print(authors_total_book_list)
-            
             rented_book_list = self.env['library.rent'].search([]).mapped('id') # todos los libros alquilados de todos los autores
-            print(rented_book_list)
+            
             
             not_rented = []
             for book in authors_total_book_list:
                 if book not in rented_book_list:
                     not_rented.append(book)
-            print(not_rented)
             
         self.not_rented_books = not_rented
         
