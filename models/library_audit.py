@@ -13,3 +13,6 @@ class audit(models.Model):
     res_id = fields.Integer()
     res_model = fields.Char()
     
+    
+    
+    

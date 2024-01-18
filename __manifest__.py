@@ -17,8 +17,11 @@
         'wizards/rent_book.xml',
         'wizards/return_wizard.xml',
         
-        'views/rent_library.xml',
+        'data/mail_template.xml',
+        'data/ir_cron.xml',
         
+        'views/res_config_settings_views.xml',
+        'views/rent_library.xml',
         'views/book_library.xml',
         'views/genres_library.xml',
         'views/res_partner.xml',

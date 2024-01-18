@@ -6,7 +6,10 @@
         <field name="name">library.rent.view.tree</field>
         <field name="model">library.rent</field>
         <field name="arch" type="xml">
-            <tree default_order="devolution_date asc">                <!-- tree es para la vista de los libros registrados -->
+            <tree default_order="devolution_date asc"> 
+                      
+                <button name="renting_email" string="Send by email" type="object"/>    
+                          <!-- tree es para la vista de los libros registrados -->
                 <field name="user_id" />
                 <field name="book" />
                 <field name="rent_date" />
