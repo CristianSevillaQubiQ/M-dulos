@@ -1,8 +1,8 @@
 from odoo import api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
-class book(models.Model):
 
+class book(models.Model):
     _name = 'library.book'
     _inherits = {'product.template': 'product_tmpl_id'}
     _inherit = ['mail.thread', 'mail.activity.mixin', 'library.audit.mixing']

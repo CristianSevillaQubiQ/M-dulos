@@ -12,7 +12,3 @@ class audit(models.Model):
     #book_id = fields.Char()
     res_id = fields.Integer()
     res_model = fields.Char()
-    
-    
-    
-    
