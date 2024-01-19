@@ -17,7 +17,7 @@ class rent(models.Model):
         for record in self.env['library.rent'].search([('state', "=", "pending"),("devolution_date", "<=", date.today())]):
             template_id = self.env.ref('doq_2.renting_email_template')
             template_id.send_mail(record.id, force_send=True)
-            s
+            
     
     
     

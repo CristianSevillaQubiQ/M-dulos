@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="library_rent_graph_view" model="ir.ui.view">
+        <field name="name">library.rent.view.graph</field>
+        <field name="model">library.rent</field>
+        <field name="arch" type="xml">
+            <graph type="|pie,bar,line|" string="Library rent graph">
+                <field name="book.genres_ids" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="rent_graph" model="ir.actions.act_window">
+        <field name="name">Rent graph</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.rent</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+            Here you can see the graph of the rents users take.
+            </p>
+            <p>
+            </p>
+        </field>
+
+    </record>
+
+
 
     <!-- library.book tree view -->
     <record id="library_rent_view_tree" model="ir.ui.view">
@@ -7,9 +33,6 @@
         <field name="model">library.rent</field>
         <field name="arch" type="xml">
             <tree default_order="devolution_date asc"> 
-                      
-                <button name="renting_email" string="Send by email" type="object"/>    
-                          <!-- tree es para la vista de los libros registrados -->
                 <field name="user_id" />
                 <field name="book" />
                 <field name="rent_date" />
@@ -44,6 +67,13 @@
         </field>
 
     </record>
+
+
+    <menuitem id="rent" parent="library_book_main_menu" name="Rent" sequence="1" />
+        <menuitem id="rent_wizard" parent="rent" name="Rent" action="wizzard_rent" sequence="1"/>
+        <menuitem id="returns_wizard" parent="rent" name="Returns" action="wizzard_return" sequence="2"/>
+        <menuitem id="rent_record" parent="rent" name="Rent record" action="record_rent" sequence="3"/>
+        <menuitem id="rent_graph" parent="rent" name="Rent graph" action="library_rent_graph_view" sequence="4"/>
 
     
 

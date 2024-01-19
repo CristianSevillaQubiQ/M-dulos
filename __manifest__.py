@@ -18,7 +18,7 @@
         'wizards/return_wizard.xml',
         
         'data/mail_template.xml',
-        'data/ir_cron.xml',
+        #'data/ir_cron.xml',
         
         'views/res_config_settings_views.xml',
         'views/rent_library.xml',
