@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-12 10:28+0000\n"
-"PO-Revision-Date: 2024-01-12 11:31+0100\n"
+"POT-Creation-Date: 2024-01-23 09:03+0000\n"
+"PO-Revision-Date: 2024-01-23 10:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -28,6 +28,21 @@ msgid "(object.name + \"_book_report\")"
 msgstr ""
 
 #. module: doq_2
+#: model:mail.template,body_html:doq_2.renting_email_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p>Hola <t t-out=\"object.user_id.name\"></t>, tienes un libro pendiente de "
+"entregar</p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Rent End Date Alert</span>"
+msgstr ""
+
+#. module: doq_2
 #: model_terms:ir.ui.view,arch_db:doq_2.res_partner_member_view
 msgid "<span class=\"o_stat_text\">Libros prestados</span>"
 msgstr ""
@@ -35,6 +50,16 @@ msgstr ""
 #. module: doq_2
 #: model_terms:ir.ui.view,arch_db:doq_2.res_partner_member_view
 msgid "<span class=\"o_stat_text\">Total libros vendidos</span>"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_config_settings_view_form
+msgid "<span> days before the end date</span>"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_config_settings_view_form
+msgid "<span>Send an alert </span>"
 msgstr ""
 
 #. module: doq_2
@@ -157,7 +182,7 @@ msgid "Barcode"
 msgstr ""
 
 #. module: doq_2
-#: model:ir.model.fields,field_description:doq_2.field_library_audit__book_id
+#: model:ir.model.fields,field_description:doq_2.field_library_mix_report__book_id
 #: model:ir.model.fields,field_description:doq_2.field_library_rent__book
 #: model:ir.model.fields,field_description:doq_2.field_rent_book__book
 #: model:ir.model.fields,field_description:doq_2.field_return_book__book
@@ -174,6 +199,11 @@ msgstr "Autor"
 #: model_terms:ir.ui.view,arch_db:doq_2.view_res_partner_filter
 msgid "Book author"
 msgstr "Autor"
+
+#. module: doq_2
+#: model:mail.template,subject:doq_2.renting_email_template
+msgid "Book renting"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__book_type
@@ -245,9 +275,19 @@ msgid "Component"
 msgstr "Componentes"
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: doq_2
 #: model:ir.model,name:doq_2.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__purchase_method
+msgid "Control Policy"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__standard_price
@@ -402,6 +442,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__display_name
+#: model:ir.model.fields,field_description:doq_2.field_library_mix_report__display_name
 #: model:ir.model.fields,field_description:doq_2.field_library_rent__display_name
 #: model:ir.model.fields,field_description:doq_2.field_rent_book__display_name
 #: model:ir.model.fields,field_description:doq_2.field_return_book__display_name
@@ -462,6 +503,12 @@ msgid "Forecasted Quantity"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.library_config_settings_action
+#: model:ir.ui.menu,name:doq_2.library_config_settings_menu
+msgid "General"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.actions.act_window,name:doq_2.record_genre
 #: model:ir.model.fields,field_description:doq_2.field_library_book__genres_ids
 #: model:ir.model.fields,field_description:doq_2.field_res_partner__genres_ids
@@ -486,6 +533,11 @@ msgid "Has Message"
 msgstr ""
 
 #. module: doq_2
+#: model_terms:ir.actions.act_window,help:doq_2.pivot_rent_and_sold
+msgid "Here you can see the rents and sold total on books."
+msgstr ""
+
+#. module: doq_2
 #: model_terms:ir.actions.act_window,help:doq_2.record_rent
 msgid "Here you can see the rents users take."
 msgstr ""
@@ -497,6 +549,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__id
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack__id
 #: model:ir.model.fields,field_description:doq_2.field_library_genre__id
+#: model:ir.model.fields,field_description:doq_2.field_library_mix_report__id
 #: model:ir.model.fields,field_description:doq_2.field_library_rent__id
 #: model:ir.model.fields,field_description:doq_2.field_rent_book__id
 #: model:ir.model.fields,field_description:doq_2.field_return_book__id
@@ -574,6 +627,11 @@ msgid "Incoming"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.ui.menu,name:doq_2.reports
+msgid "Informes"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__default_code
 msgid "Internal Reference"
 msgstr ""
@@ -586,6 +644,11 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__valuation
 msgid "Inventory Valuation"
+msgstr ""
+
+#. module: doq_2
+#: model:mail.template,name:doq_2.renting_email_template
+msgid "Invoice: Sending"
 msgstr ""
 
 #. module: doq_2
@@ -633,6 +696,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_book_pack____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_genre____last_update
+#: model:ir.model.fields,field_description:doq_2.field_library_mix_report____last_update
 #: model:ir.model.fields,field_description:doq_2.field_library_rent____last_update
 #: model:ir.model.fields,field_description:doq_2.field_rent_book____last_update
 #: model:ir.model.fields,field_description:doq_2.field_return_book____last_update
@@ -668,8 +732,14 @@ msgstr ""
 #. module: doq_2
 #: model:ir.module.category,name:doq_2.module_category_library
 #: model:ir.ui.menu,name:doq_2.library_book_main_menu
+#: model_terms:ir.ui.view,arch_db:doq_2.res_config_settings_view_form
 msgid "Library"
 msgstr "Librería"
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.res_config_settings_view_form
+msgid "Library Management"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_res_partner__library_member
@@ -738,6 +808,11 @@ msgid "Message Delivery error"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__purchase_line_warn_msg
+msgid "Message for Purchase Order Line"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__sale_line_warn_msg
 msgid "Message for Sales Order Line"
 msgstr ""
@@ -763,6 +838,13 @@ msgid "Model for creating packs of books"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model,name:doq_2.model_library_mix_report
+msgid ""
+"Model for mix report, between books, times the book has been rented and the total each book has "
+"sold."
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model,name:doq_2.model_library_book
 msgid "Model for registering books."
 msgstr "Modelo para registrar libros."
@@ -775,6 +857,11 @@ msgstr "Modelo para registrar géneros."
 #. module: doq_2
 #: model:ir.model,name:doq_2.model_library_rent
 msgid "Model for renting books."
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model,name:doq_2.model_library_audit_mixing
+msgid "Modelo abstracto"
 msgstr ""
 
 #. module: doq_2
@@ -860,6 +947,13 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__pricelist_item_count
 msgid "Number of price rules"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__purchase_method
+msgid ""
+"On ordered quantities: Control bills based on ordered quantities.\n"
+"On received quantities: Control bills based on received quantities."
 msgstr ""
 
 #. module: doq_2
@@ -976,6 +1070,11 @@ msgid "Purchase Description"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__purchase_line_warn
+msgid "Purchase Order Line Warning"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__uom_po_id
 msgid "Purchase UoM"
 msgstr ""
@@ -984,6 +1083,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:doq_2.field_library_book__buy_link
 msgid "Purchase link"
 msgstr "Link de compra"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_book__purchased_product_qty
+msgid "Purchased"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book_component_line__quantity
@@ -1021,8 +1125,8 @@ msgid "Remove"
 msgstr "Eliminar"
 
 #. module: doq_2
-#: model:ir.actions.act_window,name:doq_2.record_rent model:ir.ui.menu,name:doq_2.library_rent_record
-#: model:ir.ui.menu,name:doq_2.rent model_terms:ir.ui.view,arch_db:doq_2.wizard_rent_view_form
+#: model:ir.actions.act_window,name:doq_2.record_rent model:ir.ui.menu,name:doq_2.rent
+#: model_terms:ir.ui.view,arch_db:doq_2.wizard_rent_view_form
 msgid "Rent"
 msgstr "Alquileres"
 
@@ -1033,19 +1137,34 @@ msgid "Rent Date"
 msgstr "Fecha de alquiler"
 
 #. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.pivot_rent_and_sold
+msgid "Rent and sold"
+msgstr ""
+
+#. module: doq_2
 #: model:ir.actions.act_window,name:doq_2.wizzard_rent
 msgid "Rent books"
 msgstr "Alquiler de libros"
 
 #. module: doq_2
-#: model:ir.ui.menu,name:doq_2.rent_wizard
+#: model:ir.ui.menu,name:doq_2.rent_record
 msgid "Rent record"
 msgstr "Historial de alquileres"
+
+#. module: doq_2
+#: model:ir.ui.menu,name:doq_2.rent_wizard
+msgid "Rent wizzard"
+msgstr "Alquilar libro"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_res_partner__rented_books_count
 #: model:ir.model.fields,field_description:doq_2.field_res_users__rented_books_count
 msgid "Rented Books Count"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_res_config_settings__renting_days
+msgid "Renting days"
 msgstr ""
 
 #. module: doq_2
@@ -1061,6 +1180,16 @@ msgstr ""
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__nbr_reordering_rules
 msgid "Reordering Rules"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__res_id
+msgid "Res"
+msgstr ""
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_audit__res_model
+msgid "Res Model"
 msgstr ""
 
 #. module: doq_2
@@ -1089,9 +1218,9 @@ msgid "Returned"
 msgstr "Devuelto"
 
 #. module: doq_2
-#: model:ir.ui.menu,name:doq_2.library_returns_record
+#: model:ir.ui.menu,name:doq_2.returns_wizard
 msgid "Returns"
-msgstr "Devoluciones"
+msgstr "Devolver libro"
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__route_ids
@@ -1135,6 +1264,7 @@ msgid "Second Name"
 msgstr "Apellido"
 
 #. module: doq_2
+#: model:ir.model.fields,help:doq_2.field_library_book__purchase_line_warn
 #: model:ir.model.fields,help:doq_2.field_library_book__sale_line_warn
 msgid ""
 "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" "
@@ -1256,9 +1386,19 @@ msgid ""
 msgstr ""
 
 #. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_mix_report__times_rented
+msgid "Times Rented"
+msgstr ""
+
+#. module: doq_2
 #: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
 msgid "Title:"
 msgstr "Título:"
+
+#. module: doq_2
+#: model:ir.model.fields,field_description:doq_2.field_library_mix_report__total_sold
+msgid "Total Sold"
+msgstr ""
 
 #. module: doq_2
 #: model:ir.model.fields,field_description:doq_2.field_library_book__service_type
@@ -1385,8 +1525,28 @@ msgid "e.g. Cheese Burger"
 msgstr ""
 
 #. module: doq_2
+#: model:ir.actions.act_window,name:doq_2.action_library_mix_report_pivot
+msgid "library mix report"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_mix_report_pivot
+msgid "mix matrix"
+msgstr ""
+
+#. module: doq_2
 #: model_terms:ir.ui.view,arch_db:doq_2.report_library_book_document
 msgid "null"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.ui.view,arch_db:doq_2.library_rent_view_pivot
+msgid "rent matrix"
+msgstr ""
+
+#. module: doq_2
+#: model_terms:ir.actions.act_window,help:doq_2.action_library_mix_report_pivot
+msgid "something"
 msgstr ""
 
 #. module: doq_2

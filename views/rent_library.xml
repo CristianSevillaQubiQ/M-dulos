@@ -1,29 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="library_rent_graph_view" model="ir.ui.view">
+
+    <!-- Punto 1, graph agrupado por genero con numero de alquileres por género. -->
+    <!-- 
+    <record id="library_rent_graph_view" model="ir.ui.view"> 
         <field name="name">library.rent.view.graph</field>
         <field name="model">library.rent</field>
         <field name="arch" type="xml">
-            <graph type="|pie,bar,line|" string="Library rent graph">
-                <field name="book.genres_ids" />
+            <graph string="Library rent graph">
+                <field name="book" />
+                <field name="book.genres_ids.ids" />  
             </graph>
+        </field>
+    </record> 
+    -->
+
+    <!-- Punto 2, filas libros, columnas (fecha devolucion por mes) -->
+    <record id="library_rent_view_pivot" model="ir.ui.view"> 
+        <field name="name">library.rent.view.pivot</field>
+        <field name="model">library.rent</field>
+        <field name="arch" type="xml">
+            <pivot string="rent matrix"> 
+                <field name="book" type="row"/>
+                <field name="devolution_date" type="col" interval="month"/>    
+            </pivot>
+        
         </field>
     </record>
 
-    <record id="rent_graph" model="ir.actions.act_window">
-        <field name="name">Rent graph</field>
+    <record id="pivot_rent_and_sold" model="ir.actions.act_window">
+        <field name="name">Rent and sold</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">library.rent</field>
-        <field name="view_mode">graph,pivot</field>
+        <field name="view_mode">pivot</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-            Here you can see the graph of the rents users take.
+            Here you can see the rents and sold total on books.
             </p>
             <p>
             </p>
         </field>
-
     </record>
+
+
+    <!-- Punto 3, filas libros, columnas (numero alquileres) y (importe en ventas) -->
+    <record id="library_mix_report_pivot" model="ir.ui.view">
+        <field name="name">library.mix.report.pivot</field>
+        <field name="model">library.mix.report</field>
+        <field name="arch" type="xml" >
+            <pivot disable_linking="1" display_quantity="0" string="mix matrix"> 
+                <field name="book_id" type="row"/>
+                <field name="times_rented" type="col"/>    
+                <field name="total_sold" type="col"/>    
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_library_mix_report_pivot" model="ir.actions.act_window">
+        <field name="name">library mix report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.mix.report</field>
+        <field name="view_mode">pivot</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">something</p>
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -56,7 +106,7 @@
         <field name="name">Rent</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">library.rent</field>
-        <field name="view_mode">tree</field>
+        <field name="view_mode">tree,pivot</field>
         <field name="context">{"search_default_state_filter":1}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
@@ -70,11 +120,12 @@
 
 
     <menuitem id="rent" parent="library_book_main_menu" name="Rent" sequence="1" />
-        <menuitem id="rent_wizard" parent="rent" name="Rent" action="wizzard_rent" sequence="1"/>
+        <menuitem id="rent_wizard" parent="rent" name="Rent wizzard" action="wizzard_rent" sequence="1"/>
         <menuitem id="returns_wizard" parent="rent" name="Returns" action="wizzard_return" sequence="2"/>
         <menuitem id="rent_record" parent="rent" name="Rent record" action="record_rent" sequence="3"/>
-        <menuitem id="rent_graph" parent="rent" name="Rent graph" action="library_rent_graph_view" sequence="4"/>
+        <!-- <menuitem id="rent_graph" parent="rent" name="1. Rent graph test" action="library_rent_graph_view" sequence="4"/> -->
 
+    <menuitem id="reports" parent="library_book_main_menu" name="Informes" action="action_library_mix_report_pivot" sequence="1" />
     
 
 </odoo>
