@@ -20,12 +20,13 @@
         'data/mail_template.xml',
         #'data/ir_cron.xml',
         
+        
+        'views/book_library.xml',
+        'views/audit_library.xml',
         'views/res_config_settings_views.xml',
         'views/rent_library.xml',
-        'views/book_library.xml',
         'views/genres_library.xml',
         'views/res_partner.xml',
-        'views/audit_library.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/reports.xml',

@@ -16,7 +16,7 @@ class LibraryAbstract(models.AbstractModel):
             'res_model': self._name,
             'res_id': res
             }
-        
+        print(self.env['library.book'].search([('name','=',values['name'])]).id)
         self.env['library.audit'].create(vals_audit) 
         return res
 
@@ -44,6 +44,5 @@ class LibraryAbstract(models.AbstractModel):
             'res_model': self._name,
             'res_id': self
             }
-        
         self.env['library.audit'].create(vals_audit)
         return res
